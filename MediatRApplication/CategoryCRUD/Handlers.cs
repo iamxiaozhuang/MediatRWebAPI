@@ -2,23 +2,23 @@
 
 namespace MediatRApplication.CategoryCRUD
 {
-    public class TestRequestMessage1Handler : IRequestHandler<CreateCategory, TestResponseMessage1>
+    public class TestRequestMessage1Handler : IRequestHandler<CreateCategory, CreateCategoryResult>
     {
 
-        public async Task<TestResponseMessage1> Handle(CreateCategory request, CancellationToken cancellationToken)
+        public async Task<CreateCategoryResult> Handle(CreateCategory request, CancellationToken cancellationToken)
         {
-            TestResponseMessage1 testResponseMessage = new TestResponseMessage1();
+            CreateCategoryResult  testResponseMessage = new CreateCategoryResult();
             testResponseMessage.Message = $"ACK:{request.Message},{DateTime.Now.ToString("HH:mm:ss")}";
             return testResponseMessage;
         }
     }
 
-    public class TestRequestMessage3Handler : IRequestHandler<UpdateCategory, TestResponseMessage3>
+    public class TestRequestMessage3Handler : IRequestHandler<UpdateCategory, UpdateCategoryResult>
     {
 
-        public async Task<TestResponseMessage3> Handle(UpdateCategory request, CancellationToken cancellationToken)
+        public async Task<UpdateCategoryResult> Handle(UpdateCategory request, CancellationToken cancellationToken)
         {
-            TestResponseMessage3 testResponseMessage = new TestResponseMessage3();
+            UpdateCategoryResult testResponseMessage = new UpdateCategoryResult();
             testResponseMessage.Message = $"ACK:{request.Message},{DateTime.Now.ToString("HH:mm:ss")}";
             return testResponseMessage;
         }
@@ -29,8 +29,6 @@ namespace MediatRApplication.CategoryCRUD
 
         public async Task<Unit> Handle(DeleteCategory request, CancellationToken cancellationToken)
         {
-            TestResponseMessage3 testResponseMessage = new TestResponseMessage3();
-            testResponseMessage.Message = $"ACK:{request.Message},{DateTime.Now.ToString("HH:mm:ss")}";
             return Unit.Value;
         }
     }

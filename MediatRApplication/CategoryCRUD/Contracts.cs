@@ -7,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace MediatRApplication.CategoryCRUD
 {
-    public class CreateCategory : IRequest<TestResponseMessage1>
+    public class CreateCategory : IRequest<CreateCategoryResult>
     {
         public string Message { get; set; }
     }
-    public class TestResponseMessage1
-    {
-        public string Message { get; set; }
-    }
-
-    public class ReadCategory : IRequest<TestResponseMessage2>
-    {
-        public string Message { get; set; }
-    }
-    public class TestResponseMessage2
+    public class CreateCategoryResult
     {
         public string Message { get; set; }
     }
 
-    public class UpdateCategory : IRequest<TestResponseMessage3>
+    public class ReadCategory : IRequest<ReadCategoryResult>
     {
         public string Message { get; set; }
     }
-    public class TestResponseMessage3
+    public class ReadCategoryResult
+    {
+        public string Message { get; set; }
+    }
+
+    public class UpdateCategory : IRequest<UpdateCategoryResult>
+    {
+        public string Message { get; set; }
+    }
+    public class UpdateCategoryResult
     {
         public string Message { get; set; }
     }
