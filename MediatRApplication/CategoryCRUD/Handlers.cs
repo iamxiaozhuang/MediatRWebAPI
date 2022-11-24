@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace MediatRApplication
+namespace MediatRApplication.CategoryCRUD
 {
     public class TestRequestMessage1Handler : IRequestHandler<CreateCategory, TestResponseMessage1>
     {

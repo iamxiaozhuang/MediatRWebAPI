@@ -1,5 +1,5 @@
 using MediatR;
-using MediatRApplication;
+using MediatRApplication.CategoryCRUD;
 using MediatRWebAPI;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
