@@ -111,7 +111,7 @@ namespace MediatRWebAPI
         }
 
         /// <summary>
-        /// 为实现了IRequest<>的消息类映射WebAPI接口。
+        /// 为实现了INotification的消息类映射WebAPI接口。
         /// </summary>
         /// <typeparam name="TNotification"></typeparam>
         /// <param name="app"></param>
